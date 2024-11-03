@@ -1,0 +1,264 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  font-family: "Montserrat", sans-serif;
+  background-color: #F7F7FE;
+
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/*! start here */
+/* switch button */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 43px;
+  height: 22px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #CFD8EF;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked+.slider {
+  background: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
+}
+
+input:checked+.slider:before {
+  transform: translateX(20px);
+}
+
+.container {
+  background: url(../img/Group\ 10.png) no-repeat right top ;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 39.01px;
+  text-align: center;
+  color: #6E728E;
+  margin-top: 64px;
+}
+
+.checkbox-btn-area {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+span {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: right;
+  color: #6E728E;
+}
+
+/* card area */
+.card-area{
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  padding-bottom: 71px;
+}
+
+.plan-basic {
+  box-shadow: 0px 20px 40px 0px #D4D2F480;
+  background-color: white;
+  padding: 30px;
+  max-width: 380px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 71px;
+  letter-spacing: -2.1600000858306885px;
+  text-align: center;
+  color: #4A4D60;
+  margin-top: 24px;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  color: #4A4D60;
+}
+
+ul {
+  list-style: none;
+  margin-top: 32px;
+}
+
+li {
+  border-bottom: 1px solid #6E728E;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  color: #6E728E;
+  padding-block: 12px;
+}
+
+li:nth-child(1) {
+  border-top: 1px solid #6E728E;
+}
+
+a {
+  text-decoration: none;
+  background: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 15.85px;
+  letter-spacing: 1.3928571939468384px;
+  text-align: center;
+  padding: 14px 57px;
+  margin-inline: auto;
+  display: inline-block;
+  margin-top: 32px;
+  color: white;
+  border-radius: 6px;
+}
+
+.purple{
+ background: linear-gradient(135deg, #A2A7F0 0.06%, #696EDD 100.06%);
+ color: white;
+}
+
+.white{
+  color: white;
+}
+ 
+button {
+  background-color: white ;
+  color: #696EDD ;
+  text-decoration: none;
+  background: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 15.85px;
+  letter-spacing: 1.3928571939468384px;
+  text-align: center;
+  padding: 14px 57px;
+  margin-inline: auto;
+  display: inline-block;
+  margin-top: 32px;
+  color: white;
+  border-radius: 6px;
+  border: 1px solid transparent;
+}
+
+
+/* respoonsive part start here */
+
+@media(width>= 1200px){
+  .card-area{
+    flex-direction: row;
+    gap: 0px;
+
+  }
+  .purple{
+    height: 510px;
+  }
+}
